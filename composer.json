@@ -1,0 +1,65 @@
+{
+    "name": "app-dev-panel/cli",
+    "type": "library",
+    "description": "ADP CLI — console commands for the debug server, data queries, storage reset, and standalone HTTP server",
+    "keywords": [
+        "debug",
+        "debug-panel",
+        "debugger",
+        "cli",
+        "console",
+        "debug-server",
+        "profiler",
+        "monitoring",
+        "observability",
+        "diagnostics",
+        "ai",
+        "llm",
+        "developer-tools",
+        "devtools",
+        "app-dev-panel",
+        "adp",
+        "application-development-panel",
+        "development-server"
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.4",
+        "app-dev-panel/kernel": "^1.0",
+        "app-dev-panel/api": "^1.0",
+        "app-dev-panel/mcp-server": "^1.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "guzzlehttp/psr7": "^2.4",
+        "psr/log": "^3.0",
+        "symfony/console": "^6.4|^7.0|^8.0",
+        "symfony/process": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {},
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Kernel"
+        },
+        {
+            "type": "path",
+            "url": "../API"
+        },
+        {
+            "type": "path",
+            "url": "../McpServer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AppDevPanel\\Cli\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppDevPanel\\Cli\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --no-interaction"
+    }
+}
